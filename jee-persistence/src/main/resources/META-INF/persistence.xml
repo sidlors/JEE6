@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="jee-persistence">
+		<class>mx.com.sidlors.entity.Country</class>
+		<class>mx.com.sidlors.entity.Department</class>
+		<class>mx.com.sidlors.entity.Employee</class>
+		<class>mx.com.sidlors.entity.Job</class>
+		<class>mx.com.sidlors.entity.JobHistory</class>
+		<class>mx.com.sidlors.entity.JobHistoryPK</class>
+		<class>mx.com.sidlors.entity.Location</class>
+		<class>mx.com.sidlors.entity.Region</class>
+	</persistence-unit>
+</persistence>
