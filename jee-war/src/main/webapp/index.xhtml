@@ -1,19 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:f="http://java.sun.com/jsf/core">
-
-<f:loadBundle basename="resources.application" var="msg"/>
-
+<html>
 <head>
-    <title><h:outputText value="#{msg.welcomeTitle}" /></title>
-</head>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<!-- meta anterior para compatibilidad EXTJS con IE -->
+	<!-- Revisar: http://www.sencha.com/forum/showthread.php?56875-Ext.ux.tree.CheckTreePanel/page15 -->
+<title>SHS Proyecto</title>
+<!-- funciono cmd con extjs5-->
+<link rel="stylesheet" type="text/css"
+	href="ext/build/packages/ext-theme-classic/build/resources/ext-theme-classic-all.css" />
 
+<!-- <x-compile> -->
+<!-- <x-bootstrap> -->
+<script type="text/javascript" src="ext/build/ext-all-debug.js"></script>
+<!-- </x-bootstrap> -->
+<script type="text/javascript" src="app.js"></script>
+<!-- </x-compile> -->
+
+<script type="text/javascript"
+	src="ext/build/packages/ext-theme-classic/build/ext-theme-classic.js"></script>
+
+</head>
 <body>
-<h3><h:outputText value="#{msg.welcomeHeading}" /></h3>
-<p><h:outputText value="#{msg.welcomeMessage}" /></p>
 </body>
 </html>
