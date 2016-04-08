@@ -5,14 +5,9 @@
 	      version="3.0">
   <display-name>jee-war</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <!--context-param>
+  <context-param>
     <param-name>javax.faces.PROJECT_STAGE</param-name>
     <param-value>Development</param-value>
   </context-param>
@@ -36,5 +31,32 @@
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.xhtml</url-pattern>
-  </servlet-mapping-->
+  </servlet-mapping>
+  <!--Security issues-->
+  <!--security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Wildcard significa que toda la application requiere autenticacion</web-resource-name>
+			<url-pattern>/*</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+
+		<auth-constraint>
+			<role-name>user</role-name>
+		</auth-constraint>
+
+		<user-data-constraint>
+			<transport-guarantee can be CONFIDENTIAL, INTEGRAL, or NONE>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint-->
+
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/login.xhtml</form-login-page>
+			<form-error-page>/login-failed.xhtml</form-error-page>
+		</form-login-config>
+	</login-config>
+  
 </web-app>
