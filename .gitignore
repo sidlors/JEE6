@@ -16,3 +16,7 @@ hs_err_pid*
 .checkstyle
 .tern-project
 bin
+target/
+*.log
+.gitignore
+
