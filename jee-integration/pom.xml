@@ -10,6 +10,13 @@
 	<packaging>ejb</packaging>
 
 	<dependencies>
+	<!--Aqui el orden es importante, primero el ejb embedded y luego el api jee6-->
+		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>tomee-embedded</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
@@ -20,6 +27,12 @@
 			<artifactId>jee-integration-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 

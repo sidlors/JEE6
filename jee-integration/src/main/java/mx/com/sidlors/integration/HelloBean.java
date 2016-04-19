@@ -11,4 +11,9 @@ import mx.com.sidlors.integration.api.HelloBeanRemote;
 @Stateless
 public class HelloBean implements HelloBeanRemote, HelloBeanLocal {
 
+  @Override
+  public String saidHello( String nombre ) {
+    return "Hola "+nombre;
+  }
+
 }
