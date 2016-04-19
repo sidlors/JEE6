@@ -4,5 +4,6 @@ import javax.ejb.Remote;
 
 @Remote
 public interface HelloBeanRemote {
-
+  
+  public String saidHello(String nombre);
 }
