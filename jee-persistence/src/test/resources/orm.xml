@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+	<package>mx.com.sidlors.entity</package>
+	<entity class="Country" metadata-complete="false" access="FIELD">
+		<attributes>
+			<id name="countryId">
+				<column name="COUNTRY_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+		</attributes>
+	</entity>
+	<entity class="Department" metadata-complete="false" access="FIELD">
+		<attributes>
+			<id name="departmentId">
+				<column name="DEPARTMENT_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+		</attributes>
+	</entity>
+	<entity class="Employee" metadata-complete="false" access="FIELD">
+		<attributes>
+			<id name="employeeId">
+				<column name="EMPLOYEE_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+		</attributes>
+	</entity>
+	<entity class="Job" metadata-complete="false" access="FIELD">
+		<attributes>
+			<id name="jobId">
+				<column name="JOB_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+		</attributes>
+	</entity>
+	<entity class="JobHistory" metadata-complete="false" access="FIELD">
+		<attributes>
+		</attributes>
+	</entity>
+	<entity class="Location" metadata-complete="false" access="FIELD">
+		<attributes>
+			<id name="locationId">
+				<column name="LOCATION_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+		</attributes>
+	</entity>
+	<entity class="Region">
+		<attributes>
+			<id name="regionId">
+				<column name="REGION_ID" />
+				<generated-value strategy="AUTO" />
+			</id>
+		</attributes>
+	</entity>
+</entity-mappings>

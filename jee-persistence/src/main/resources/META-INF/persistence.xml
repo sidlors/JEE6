@@ -3,6 +3,7 @@
 	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<persistence-unit name="jee-persistence">
+		<mapping-file>orm.xml</mapping-file>
 		<class>mx.com.sidlors.entity.Country</class>
 		<class>mx.com.sidlors.entity.Department</class>
 		<class>mx.com.sidlors.entity.Employee</class>
@@ -11,5 +12,17 @@
 		<class>mx.com.sidlors.entity.JobHistoryPK</class>
 		<class>mx.com.sidlors.entity.Location</class>
 		<class>mx.com.sidlors.entity.Region</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:testdb" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<!-- <property name="eclipselink.allow-zero-id" value="true"/> -->
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode"
+				value="database" />
+			<!-- Puede ser SEVERE / WARNING / INFO / CONFIG / FINE / FINER / FINEST -->
+			<property name="eclipselink.logging.level" value="FINE" />
+		</properties>
 	</persistence-unit>
 </persistence>
