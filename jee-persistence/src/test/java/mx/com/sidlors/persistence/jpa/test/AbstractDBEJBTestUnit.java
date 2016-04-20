@@ -32,12 +32,12 @@ public abstract class AbstractDBEJBTestUnit {
   public void setUp() {
     if( em == null ){
       System.out.println( "----> Creando Entity manager" );
-      EntityManagerFactory emf = Persistence.createEntityManagerFactory( "DigitalBookingHSQLDBTest" );
+      EntityManagerFactory emf = Persistence.createEntityManagerFactory( "PersistenceUnitTest" );
       em = emf.createEntityManager();
       // Agregar la relación de daos y sus implementaciones
       this.mapDAO = MapDAO.init();
       // Llamar la inicialización de los catálogos
-      initializeData( "dataset/catalog/catalog.sql" );
+      initializeData( "sql/catalog/export.sql" );
     }
   }
 
