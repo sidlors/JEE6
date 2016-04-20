@@ -9,7 +9,8 @@ public final class MapDAO
   public static Map<Class<?>, Class<?>> init()
   {
     Map<Class<?>, Class<?>> mapDAO = new HashMap<Class<?>, Class<?>>();
-    mapDAO.put( mx.com.sidlors.persistence.dao.EmployeeDAO.class, mx.com.sidlors.persistence.dao.impl.EmployeeDAOImpl.class );  
+    mapDAO.put( mx.com.sidlors.persistence.dao.EmployeeDAO.class, mx.com.sidlors.persistence.dao.impl.EmployeeDAOImpl.class );
+    mapDAO.put( mx.com.sidlors.persistence.dao.CountryDAO.class, mx.com.sidlors.persistence.dao.impl.CountryDAOImpl.class );
     
     return mapDAO;
   }

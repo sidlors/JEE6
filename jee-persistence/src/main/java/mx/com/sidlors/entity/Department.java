@@ -1,8 +1,20 @@
 package mx.com.sidlors.entity;
 
-import java.io.Serializable;
-import javax.persistence.*;
 import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import mx.com.sidlors.base.entity.AbstractEntity;
 
 
 /**
@@ -12,7 +24,7 @@ import java.util.List;
 @Entity
 @Table(name="DEPARTMENTS")
 @NamedQuery(name="Department.findAll", query="SELECT d FROM Department d")
-public class Department implements Serializable {
+public class Department  extends AbstractEntity<Department> {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -26,7 +38,7 @@ public class Department implements Serializable {
 
 	//bi-directional many-to-one association to Employee
 	@ManyToOne
-	@JoinColumn(name="MANAGER_ID")
+	@JoinColumn(name="MANAGER_ID" ,nullable=true)
 	private Employee employee;
 
 	//bi-directional many-to-one association to Location
@@ -120,5 +132,23 @@ public class Department implements Serializable {
 
 		return jobHistory;
 	}
+
+  @Override
+  public int compareTo( Department o ) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  @Override
+  public boolean equals( Object obj ) {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    // TODO Auto-generated method stub
+    return 0;
+  }
 
 }

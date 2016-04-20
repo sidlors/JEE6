@@ -1,8 +1,8 @@
 package mx.com.sidlors.entity;
 
-import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
+import mx.com.sidlors.base.entity.AbstractEntity;
 
 
 /**
@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @Table(name="COUNTRIES")
 @NamedQuery(name="Country.findAll", query="SELECT c FROM Country c")
-public class Country implements Serializable {
+public class Country extends AbstractEntity<Country>{
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -81,5 +81,25 @@ public class Country implements Serializable {
 
 		return location;
 	}
+
+  @Override
+  public int compareTo( Country o ) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  @Override
+  public boolean equals( Object obj ) {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+ 
 
 }

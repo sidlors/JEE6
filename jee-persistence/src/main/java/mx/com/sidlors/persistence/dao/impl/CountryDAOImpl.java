@@ -2,43 +2,43 @@ package mx.com.sidlors.persistence.dao.impl;
 
 import java.util.List;
 
-import mx.com.sidlors.entity.Employee;
-import mx.com.sidlors.persistence.dao.EmployeeDAO;
+import mx.com.sidlors.entity.Country;
+import mx.com.sidlors.persistence.dao.CountryDAO;
 
-public class EmployeeDAOImpl implements EmployeeDAO {
+public class CountryDAOImpl implements CountryDAO{
 
   @Override
-  public void create( Employee entity ) {
+  public void create( Country entity ) {
     // TODO Auto-generated method stub
     
   }
 
   @Override
-  public void edit( Employee entity ) {
+  public void edit( Country entity ) {
     // TODO Auto-generated method stub
     
   }
 
   @Override
-  public void remove( Employee entity ) {
+  public void remove( Country entity ) {
     // TODO Auto-generated method stub
     
   }
 
   @Override
-  public Employee find( Object id ) {
+  public Country find( Object id ) {
     // TODO Auto-generated method stub
     return null;
   }
 
   @Override
-  public List<Employee> findAll() {
+  public List<Country> findAll() {
     // TODO Auto-generated method stub
     return null;
   }
 
   @Override
-  public List<Employee> findRange( int[] range ) {
+  public List<Country> findRange( int[] range ) {
     // TODO Auto-generated method stub
     return null;
   }
